@@ -1,10 +1,4 @@
 import { projects } from "../data/portfolioData";
-import resumeImg from "../assets/images/resume-analyzer.png";
-import chatbotImg from "../assets/images/chatbot.png";
-import weatherImg from "../assets/images/weather-dashboard.png";
-import spamImg from "../assets/images/spam-classifier.png";
-import shoeImg from "../assets/images/shoe-shop.png";
-import portfolioImg from "../assets/images/portfolio.png";
 
 function Projects() {
   return (

@@ -129,6 +129,7 @@ function About() {
 
         <img
   src={profile}
+  alt="Saad Nawaz"
   className="
   w-80
   h-80
