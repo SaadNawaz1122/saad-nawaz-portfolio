@@ -66,9 +66,9 @@ useEffect(() => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto min-h-screen flex items-center px-8">
+      <div className="relative z-10 max-w-7xl mx-auto min-h-screen flex items-center px-5 sm:px-6 lg:px-8 py-28 lg:py-0">
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center w-full">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full">
 
   {/* Left Side */}
 
@@ -98,7 +98,7 @@ useEffect(() => {
 
     {/* Name */}
 
-    <h1 className="mt-4 text-6xl lg:text-7xl font-black leading-tight">
+    <h1 className="mt-4 text-4xl sm:text-5xl lg:text-7xl font-black leading-tight">
 
       <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500 bg-clip-text text-transparent">
 
@@ -110,7 +110,7 @@ useEffect(() => {
 
     {/* Typing */}
 
-    <div className="mt-8 min-h-[70px] text-3xl font-semibold text-gray-300">
+    <div className="mt-8 min-h-[70px] text-xl sm:text-2xl lg:text-3xl font-semibold text-gray-300">
 
       <TypeAnimation
         sequence={[
@@ -161,8 +161,10 @@ useEffect(() => {
     target="_blank"
     rel="noopener noreferrer"
     className="
-      px-8
-      py-4
+      px-6
+      sm:px-8
+      py-3.5
+      sm:py-4
       rounded-2xl
       bg-gradient-to-r
       from-cyan-500
@@ -185,8 +187,10 @@ useEffect(() => {
     href="/Saad_Nawaz_CV.pdf"
     download
     className="
-      px-8
-      py-4
+      px-6
+      sm:px-8
+      py-3.5
+      sm:py-4
       rounded-2xl
       border
       border-cyan-400
@@ -210,7 +214,7 @@ useEffect(() => {
     href="#contact"
     whileHover={{ scale: 1.05 }}
     whileTap={{ scale: 0.95 }}
-    className="px-8 py-4 rounded-2xl border border-cyan-400 text-cyan-300 font-semibold backdrop-blur-xl bg-white/5 hover:bg-cyan-500/10 transition-all duration-300"
+    className="px-6 sm:px-8 py-3.5 sm:py-4 rounded-2xl border border-cyan-400 text-cyan-300 font-semibold backdrop-blur-xl bg-white/5 hover:bg-cyan-500/10 transition-all duration-300"
   >
     💼 Hire Me
   </motion.a>
@@ -271,29 +275,29 @@ useEffect(() => {
 </div>
 {/* Statistics */}
 
-<div className="grid grid-cols-3 gap-5 mt-12 max-w-2xl">
+<div className="grid grid-cols-3 gap-3 sm:gap-5 mt-12 max-w-2xl">
 
   {/* Projects */}
 
   <motion.div
     whileHover={{ y: -8 }}
-    className="relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-white/5 backdrop-blur-xl p-6 text-center"
+    className="relative overflow-hidden rounded-2xl border border-cyan-500/20 bg-white/5 backdrop-blur-xl p-3 sm:p-6 text-center"
   >
 
     <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-transparent"></div>
-    <div className="absolute top-5 right-5 text-cyan-400 text-2xl">
+    <div className="absolute top-2 right-2 sm:top-5 sm:right-5 text-cyan-400 text-base sm:text-2xl">
   🚀
 </div>
-   <h3 className="relative text-5xl font-black text-cyan-400">
+   <h3 className="relative text-2xl sm:text-4xl lg:text-5xl font-black text-cyan-400">
   <CountUp end={10} duration={2}/>
   +
 </h3>
 
-<h4 className="relative mt-4 text-lg font-semibold text-white">
+<h4 className="relative mt-2 sm:mt-4 text-xs sm:text-lg font-semibold text-white">
   Completed Projects
 </h4>
 
-<p className="relative mt-2 text-sm text-gray-400 leading-6">
+<p className="relative mt-1 sm:mt-2 text-[11px] sm:text-sm text-gray-400 leading-4 sm:leading-6 hidden sm:block">
   AI, React, Flask & Python applications
 </p>
 
@@ -303,23 +307,23 @@ useEffect(() => {
 
   <motion.div
     whileHover={{ y: -8 }}
-    className="relative overflow-hidden rounded-2xl border border-purple-500/20 bg-white/5 backdrop-blur-xl p-6 text-center"
+    className="relative overflow-hidden rounded-2xl border border-purple-500/20 bg-white/5 backdrop-blur-xl p-3 sm:p-6 text-center"
   >
 
     <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent"></div>
-    <div className="absolute top-5 right-5 text-purple-400 text-2xl">
+    <div className="absolute top-2 right-2 sm:top-5 sm:right-5 text-purple-400 text-base sm:text-2xl">
   🧠
 </div>
-    <h3 className="relative text-5xl font-black text-purple-400">
+    <h3 className="relative text-2xl sm:text-4xl lg:text-5xl font-black text-purple-400">
   <CountUp end={3} duration={2}/>
   +
 </h3>
 
-<h4 className="relative mt-4 text-lg font-semibold text-white">
+<h4 className="relative mt-2 sm:mt-4 text-xs sm:text-lg font-semibold text-white">
   AI Journey
 </h4>
 
-<p className="relative mt-2 text-sm text-gray-400 leading-6">
+<p className="relative mt-1 sm:mt-2 text-[11px] sm:text-sm text-gray-400 leading-4 sm:leading-6 hidden sm:block">
   Continuous learning in AI & Software Engineering
 </p>
 
@@ -329,23 +333,23 @@ useEffect(() => {
 
   <motion.div
     whileHover={{ y: -8 }}
-    className="relative overflow-hidden rounded-2xl border border-pink-500/20 bg-white/5 backdrop-blur-xl p-6 text-center"
+    className="relative overflow-hidden rounded-2xl border border-pink-500/20 bg-white/5 backdrop-blur-xl p-3 sm:p-6 text-center"
   >
 
     <div className="absolute inset-0 bg-gradient-to-br from-pink-500/10 to-transparent"></div>
-    <div className="absolute top-5 right-5 text-pink-400 text-2xl">
+    <div className="absolute top-2 right-2 sm:top-5 sm:right-5 text-pink-400 text-base sm:text-2xl">
   ⚡
 </div>
-    <h3 className="relative text-5xl font-black text-pink-400">
+    <h3 className="relative text-2xl sm:text-4xl lg:text-5xl font-black text-pink-400">
   <CountUp end={12} duration={2}/>
   +
 </h3>
 
-<h4 className="relative mt-4 text-lg font-semibold text-white">
+<h4 className="relative mt-2 sm:mt-4 text-xs sm:text-lg font-semibold text-white">
   Core Technologies
 </h4>
 
-<p className="relative mt-2 text-sm text-gray-400 leading-6">
+<p className="relative mt-1 sm:mt-2 text-[11px] sm:text-sm text-gray-400 leading-4 sm:leading-6 hidden sm:block">
   Building modern AI & Full Stack solutions
 </p>
 
@@ -391,7 +395,7 @@ useEffect(() => {
     repeat: Infinity,
     ease: "easeInOut",
   }}
-  className="absolute -left-12 top-20 z-20"
+  className="hidden sm:block absolute -left-6 sm:-left-12 top-20 z-20"
 >
   <div
     className="
@@ -421,7 +425,7 @@ useEffect(() => {
     repeat: Infinity,
     ease: "easeInOut",
   }}
-  className="absolute -right-12 top-36 z-20"
+  className="hidden sm:block absolute -right-6 sm:-right-12 top-36 z-20"
 >
   <div
     className="
@@ -451,7 +455,7 @@ useEffect(() => {
     repeat: Infinity,
     ease: "easeInOut",
   }}
-  className="absolute -left-10 bottom-24 z-20"
+  className="hidden sm:block absolute -left-4 sm:-left-10 bottom-24 z-20"
 >
   <div
     className="
@@ -481,7 +485,7 @@ useEffect(() => {
     repeat: Infinity,
     ease: "easeInOut",
   }}
-  className="absolute -right-10 bottom-12 z-20"
+  className="hidden sm:block absolute -right-4 sm:-right-10 bottom-12 z-20"
 >
   <div
     className="
@@ -521,7 +525,8 @@ useEffect(() => {
   }}
   className="
   relative
-  w-[380px]
+  w-[85vw]
+  max-w-[380px]
   rounded-[35px]
   bg-white/10
   backdrop-blur-2xl

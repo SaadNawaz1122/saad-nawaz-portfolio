@@ -12,7 +12,7 @@ function Contact() {
       id="contact"
       className="bg-gray-950 text-white py-24"
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6">
 
         {/* ================= Contact Heading ================= */}
 
@@ -30,7 +30,7 @@ function Contact() {
 
   </p>
 
-  <h2 className="mt-4 text-5xl lg:text-6xl font-black">
+  <h2 className="mt-4 text-3xl sm:text-4xl lg:text-6xl font-black">
 
     Let's Build
 
@@ -73,7 +73,7 @@ shadow-2xl
 hover:shadow-cyan-500/20
 transition-all
 duration-500
-p-8
+p-5 sm:p-8
 space-y-6
 overflow-hidden
 "
@@ -173,7 +173,7 @@ shadow-2xl
 hover:shadow-cyan-500/20
 transition-all
 duration-500
-p-8
+p-5 sm:p-8
 "
           >
 

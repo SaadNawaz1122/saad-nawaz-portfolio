@@ -18,7 +18,7 @@ function Footer() {
 
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 py-20">
+      <div className="relative max-w-7xl mx-auto px-5 sm:px-6 py-16 sm:py-20">
 
         {/* Name */}
 
@@ -30,7 +30,7 @@ function Footer() {
           className="text-center"
         >
 
-          <h2 className="text-5xl font-black">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black">
 
             <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500 bg-clip-text text-transparent">
 

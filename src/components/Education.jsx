@@ -4,7 +4,7 @@ import { education } from "../data/portfolioData";
 function Education() {
   return (
     <section id="education" className="bg-gray-950 text-white py-24">
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="relative max-w-6xl mx-auto px-5 sm:px-6">
 
         {/* ================= Heading ================= */}
 
@@ -22,7 +22,7 @@ function Education() {
 
   </p>
 
-  <h2 className="mt-4 text-5xl lg:text-6xl font-black">
+  <h2 className="mt-4 text-3xl sm:text-4xl lg:text-6xl font-black">
 
     Education
 
@@ -45,8 +45,11 @@ function Education() {
 </motion.div>
         <div
   className="
+  hidden
+  sm:block
   absolute
-  -left-16
+  left-0
+  sm:-left-2
   top-10
   w-6
   h-6
@@ -70,7 +73,8 @@ function Education() {
   viewport={{ once: true }}
   className="
   relative
-  ml-16
+  ml-0
+  sm:ml-10
   mb-14
   rounded-3xl
   bg-white/5
@@ -82,12 +86,13 @@ function Education() {
   hover:shadow-cyan-500/20
   transition-all
   duration-500
-  p-8
+  p-5
+  sm:p-8
   "
 >
             {/* ================= Card Header ================= */}
 
-<div className="flex items-start justify-between">
+<div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
 
   {/* Left Side */}
 

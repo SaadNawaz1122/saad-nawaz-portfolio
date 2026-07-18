@@ -14,7 +14,7 @@ function About() {
   id="about"
   className="bg-gray-900 text-white py-24"
 >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6">
 
         {/* ================= Premium Heading ================= */}
 
@@ -53,7 +53,8 @@ function About() {
   <h2
     className="
     mt-6
-    text-5xl
+    text-3xl
+    sm:text-4xl
     lg:text-6xl
     font-black
     bg-gradient-to-r
@@ -112,7 +113,8 @@ function About() {
     <div
       className="
       relative
-      w-[360px]
+      w-[85vw]
+      max-w-[360px]
       rounded-[35px]
       bg-white/10
       backdrop-blur-2xl
@@ -131,8 +133,10 @@ function About() {
   src={profile}
   alt="Saad Nawaz"
   className="
-  w-80
-  h-80
+  w-48
+  h-48
+  sm:w-64
+  sm:h-64
   rounded-full
   object-cover
   object-[50%_20%]
@@ -177,7 +181,7 @@ function About() {
     Who I Am
   </span>
 
-  <h3 className="text-4xl lg:text-5xl font-bold mt-3 leading-tight">
+  <h3 className="text-2xl sm:text-3xl lg:text-5xl font-bold mt-3 leading-tight">
     Building Intelligent
     <span className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500 bg-clip-text text-transparent">
       AI Solutions

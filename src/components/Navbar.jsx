@@ -1,6 +1,17 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { useState } from "react";
+import { FaGithub, FaLinkedin, FaBars, FaTimes } from "react-icons/fa";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const navLinks = [
+    { href: "#home", label: "Home" },
+    { href: "#about", label: "About" },
+    { href: "#skills", label: "Skills" },
+    { href: "#projects", label: "Projects" },
+    { href: "#contact", label: "Contact" },
+  ];
+
   return (
     <nav
   className="
@@ -22,7 +33,9 @@ function Navbar() {
   max-w-7xl
   mx-auto
   h-20
-  px-8
+  px-4
+  sm:px-6
+  lg:px-8
   flex
   items-center
   justify-between"
@@ -79,128 +92,83 @@ function Navbar() {
   </div>
 </a>
           <ul className="hidden lg:flex items-center gap-10">
-          <li>
-  <a
-    href="#home"
-    className="
-    relative
-    text-gray-300
-    hover:text-cyan-400
-    transition-all
-    duration-300
-    after:absolute
-    after:left-0
-    after:-bottom-2
-    after:h-[2px]
-    after:w-0
-    after:bg-cyan-400
-    after:transition-all
-    after:duration-300
-    hover:after:w-full"
-  >
-    Home
-  </a>
-</li>
-          <li>
-  <a
-    href="#about"
-    className="
-    relative
-    text-gray-300
-    hover:text-cyan-400
-    transition-all
-    duration-300
-    after:absolute
-    after:left-0
-    after:-bottom-2
-    after:h-[2px]
-    after:w-0
-    after:bg-cyan-400
-    after:transition-all
-    after:duration-300
-    hover:after:w-full"
-  >
-    About
-  </a>
-</li>
-          <li>
-  <a
-    href="#skills"
-    className="
-    relative
-    text-gray-300
-    hover:text-cyan-400
-    transition-all
-    duration-300
-    after:absolute
-    after:left-0
-    after:-bottom-2
-    after:h-[2px]
-    after:w-0
-    after:bg-cyan-400
-    after:transition-all
-    after:duration-300
-    hover:after:w-full"
-  >
-    Skills
-  </a>
-</li>
-          <li>
-  <a
-    href="#projects"
-    className="
-    relative
-    text-gray-300
-    hover:text-cyan-400
-    transition-all
-    duration-300
-    after:absolute
-    after:left-0
-    after:-bottom-2
-    after:h-[2px]
-    after:w-0
-    after:bg-cyan-400
-    after:transition-all
-    after:duration-300
-    hover:after:w-full"
-  >
-    Projects
-  </a>
-</li>
-          <li>
-  <a
-    href="#contact"
-    className="
-    relative
-    text-gray-300
-    hover:text-cyan-400
-    transition-all
-    duration-300
-    after:absolute
-    after:left-0
-    after:-bottom-2
-    after:h-[2px]
-    after:w-0
-    after:bg-cyan-400
-    after:transition-all
-    after:duration-300
-    hover:after:w-full"
-  >
-    Contact
-  </a>
-</li>
-        </ul>
+            {navLinks.map((link) => (
+              <li key={link.href}>
+                <a
+                  href={link.href}
+                  className="
+                  relative
+                  text-gray-300
+                  hover:text-cyan-400
+                  transition-all
+                  duration-300
+                  after:absolute
+                  after:left-0
+                  after:-bottom-2
+                  after:h-[2px]
+                  after:w-0
+                  after:bg-cyan-400
+                  after:transition-all
+                  after:duration-300
+                  hover:after:w-full"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
 
-        <div className="flex items-center gap-4 text-xl">
-          <a href="https://github.com/SaadNawaz1122" target="_blank" rel="noreferrer">
-            <FaGithub className="hover:text-cyan-400 cursor-pointer" />
-          </a>
+        <div className="flex items-center gap-4">
+          <div className="hidden sm:flex items-center gap-4 text-xl">
+            <a href="https://github.com/SaadNawaz1122" target="_blank" rel="noreferrer">
+              <FaGithub className="hover:text-cyan-400 cursor-pointer" />
+            </a>
 
-          <a href="https://www.linkedin.com/in/saad-nawaz-ab0309369/" target="_blank" rel="noreferrer">
-            <FaLinkedin className="hover:text-cyan-400 cursor-pointer" />
-          </a>
+            <a href="https://www.linkedin.com/in/saad-nawaz-ab0309369/" target="_blank" rel="noreferrer">
+              <FaLinkedin className="hover:text-cyan-400 cursor-pointer" />
+            </a>
+          </div>
+
+          {/* Hamburger button - mobile & tablet only */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="lg:hidden text-2xl text-white p-2 -mr-2"
+            aria-label="Toggle menu"
+            aria-expanded={isOpen}
+          >
+            {isOpen ? <FaTimes /> : <FaBars />}
+          </button>
         </div>
 
+      </div>
+
+      {/* Mobile dropdown menu */}
+      <div
+        className={`lg:hidden overflow-hidden transition-all duration-300 ${
+          isOpen ? "max-h-96 border-t border-white/10" : "max-h-0"
+        }`}
+      >
+        <ul className="flex flex-col px-6 py-4 gap-2 bg-[#0B1120]/95">
+          {navLinks.map((link) => (
+            <li key={link.href}>
+              <a
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className="block py-3 text-gray-300 hover:text-cyan-400 transition-colors text-lg"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+          <li className="flex items-center gap-6 pt-3 pb-1 text-xl border-t border-white/10 mt-2">
+            <a href="https://github.com/SaadNawaz1122" target="_blank" rel="noreferrer">
+              <FaGithub className="hover:text-cyan-400 cursor-pointer" />
+            </a>
+            <a href="https://www.linkedin.com/in/saad-nawaz-ab0309369/" target="_blank" rel="noreferrer">
+              <FaLinkedin className="hover:text-cyan-400 cursor-pointer" />
+            </a>
+          </li>
+        </ul>
       </div>
     </nav>
   );
